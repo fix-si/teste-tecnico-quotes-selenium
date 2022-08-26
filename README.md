@@ -6,7 +6,6 @@
 Implementar um programa que utilize web scraping para percorrer todas as páginas do site: http://quotes.toscrape.com/ e coletar todas as citações exibidas.
 As informações devem ser compiladas em um arquivo .json
 </p>
-
 ## Regras:
 - Para cada citação, os seguintes dados devem ser coletados: 
     - citação (*string*),
