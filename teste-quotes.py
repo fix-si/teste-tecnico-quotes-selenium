@@ -9,7 +9,7 @@ selenium_service.get_url(url=url)
 data = {}
 quotes = []
 
-while selenium_service.verify_next_button():
+while True:
 
     for quote in selenium_service.get_quotes_divs('quote'):
         text_filter = quote.text.split('\n')
@@ -39,9 +39,10 @@ while selenium_service.verify_next_button():
 
         quotes.append(quote_data)
     
+    if not selenium_service.verify_next_button():
+        break
+    
     selenium_service.click_next_page()
-
-print(quotes)
 
 data["data"] = quotes
 
