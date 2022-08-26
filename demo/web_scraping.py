@@ -1,9 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+import os
 import json
     
-with open('demo/data/'+'data.json', 'w') as f:
+with open(f'{os.getcwd()}'+'/demo/data/data.json', 'w') as f:
     json.dump([], f)
 
 def write_json(new_data, filename='data.json'):
